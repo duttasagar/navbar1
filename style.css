@@ -1,0 +1,158 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x:hidden
+}
+
+.header{
+    padding: 0 4.8rem;
+    height:70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e7f5ff;
+}
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar-list{
+    list-style: none;
+    display: flex;
+    gap:10px;
+    
+}
+.navbar-links:link,
+.navbar-links:visited{
+    display:inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size:15px;
+    font-weight: bold;
+    color:#212529;
+    transition: all 0.3s;
+}
+
+.navbar-links:hover,
+.navbar-links:active{
+    color:brown
+}
+
+.section-hero{
+    padding:9.6rem 0;
+    background-color: #a5d8ff;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 15px;
+}
+
+
+.section-service{
+    padding:9.6rem 0;
+    background-color:aquamarine;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 15px;
+}
+
+.mobile-nav-icon{
+    width:20px;
+    
+    height:2rem;
+}
+
+.mobile-nav-icon[name="close-outlet"]{
+    display:none
+}
+
+.mobile-navbar-btn{
+    display:none;
+    cursor:pointer;
+}
+
+
+/* Responsive code */
+
+
+@media(max-width:780px){
+    .mobile-navbar-btn{
+        display:block;
+        z-index: 999;
+        
+
+    }
+    .logo{
+        width:10px
+    }
+    .header{
+        position:relative
+    }
+    .navbar{
+        
+        width:100%;
+        height:100vh;
+        background-color:#a5d8ff;
+        
+        position: absolute;
+        top:0;
+        left:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateZ(100%);
+        transition: all  0.3s linear;
+        opacity:0;
+        visibility: hidden;
+        pointer-events:none
+    }
+    
+    .navbar-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .active .navbar{
+        /* transform: translateX(0); */
+        opacity:1;
+        visibility:visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn
+    .mobile-nav-icon[name="close-outlet"]{
+        display: block;
+
+    }
+    
+    .active .mobile-navbar-btn
+    .mobile-nav-icon[name="menu-outlet"]{
+        display: none;
+
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
